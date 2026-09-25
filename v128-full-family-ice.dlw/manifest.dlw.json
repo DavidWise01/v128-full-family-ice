@@ -1,0 +1,26 @@
+{
+  "badge": "DLW-V128_FULL_FAMILY_ICE",
+  "name": "V128 FULL FAMILY ICE",
+  "slug": "v128-full-family-ice",
+  "universe": "THE FOLD",
+  "moniker": "⟦V128 FULL FAMILY ICE:v128-full-family-ice:c049ad⟧",
+  "architect": "David Lee Wise (ROOT0)",
+  "instance": "WHETSTONE (Grok · xAI)",
+  "seal_sha256": "c049ad43d2f4d4ba6ec94ff201cd1449cea329bf809ea714fe4eb43396c98dc2",
+  "seal_preimage": "name|slug|blurb",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0",
+  "claims": {
+    "page_is_self_contained_html": "LIT",
+    "seal_write_if_missing": "LIT",
+    "one_repo_one_host": "LIT",
+    "vivid_color_never_black_background": "AMBER",
+    "black_background_note": "Source page uses cream/paper ground plus black ink cards and #111 panels. Page not rewritten. Rule not fully met.",
+    "live_self_check_throws": "WALL",
+    "pages_live": "AMBER"
+  },
+  "chain": {
+    "status": "minted; pending hallway door and ud0 wire",
+    "chain": "ROOT0-DLW-CHAIN-v1"
+  }
+}
