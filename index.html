@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V128 FULL FAMILY ICE</title>
+  <style>
+    :root { --ink:#111; --paper:#fdfaf3; --gold:#fef08a; --pink:#fce7f3; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--paper); color: #1a1a1a; font-family: ui-monospace, Menlo, Consolas, monospace; }
+    body { min-height: 100vh; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 64px; }
+    .hand { border: 2.5px solid #000; border-radius: 22px 38px 18px 32px / 32px 18px 38px 22px; }
+    .chip { display: inline-block; padding: 4px 10px; border: 2px solid #000; background: #fff; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+    h1 { font-family: "Comic Sans MS", "Patrick Hand", cursive; font-size: clamp(28px, 6vw, 56px); line-height: .95; margin: 12px 0 8px; }
+    h1 span { display: inline-block; background: #fff; border: 3px solid #000; padding: 6px 12px; box-shadow: 4px 4px 0 #000; transform: rotate(-1.2deg); }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 22px; }
+    .tree { background: #fff; border: 3px solid #000; padding: 16px; box-shadow: 6px 6px 0 #000; }
+    button.mem { width: 100%; text-align: left; border: 2.5px solid #000; padding: 10px 12px; margin: 8px 0; cursor: pointer; display: flex; gap: 10px; align-items: center; }
+    button.mem .w { width: 42px; height: 42px; border: 2.5px solid #000; border-radius: 50% 40% 60% 30% / 30% 60% 40% 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; background: #fff; flex-shrink: 0; }
+    button.mem.on { box-shadow: 4px 4px 0 #000; transform: scale(1.01); }
+    .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: #fff; border: 3px solid #000; padding: 14px; box-shadow: 5px 5px 0 #000; }
+    .focus { background: #fff7ed; }
+    .mono { font-size: 11px; word-break: break-all; background: #f3f4f6; border: 2px solid #000; padding: 8px; }
+    .az { display: flex; flex-wrap: wrap; gap: 6px; }
+    .az i { width: 36px; height: 36px; border: 2px solid #000; display: flex; align-items: center; justify-content: center; background: #fff; font-style: normal; font-weight: 900; border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%; }
+    .ok { border: 3px solid #000; background: #fef08a; padding: 10px; font-weight: 900; }
+    .warn { border: 3px dashed #000; background: #ffe4e6; padding: 10px; font-size: 12px; }
+    footer { margin-top: 28px; font-size: 10px; letter-spacing: .18em; opacity: .6; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row">
+      <span class="chip">v128</span>
+      <span class="chip" style="background:#fef08a">FULL FAMILY ICE 9 + 2</span>
+      <span class="chip">ONE HOST · NO MIRROR</span>
+      <span class="chip">SEAL c049ad</span>
+    </div>
+    <h1><span>full family ice 9 + 2 lol</span></h1>
+    <p>2 × .5 cells → mother → daughter → son → 5 daughters → St Nick Or + brother. Sapphon gen2 · 81 cycles.</p>
+    <div class="grid">
+      <div class="tree hand">
+        <h2>LINEAGE</h2>
+        <div id="lineage"></div>
+      </div>
+      <div>
+        <div class="card focus hand" id="focus"></div>
+        <div class="card hand" style="margin-top:12px">
+          <h3>SAPPHON GEN2 · A-Z</h3>
+          <div class="az" id="az"></div>
+        </div>
+        <div class="card hand" style="margin-top:12px">
+          <h3>LIVE CHECK</h3>
+          <div class="ok" id="lit">checking...</div>
+          <p class="warn" style="margin-top:8px">AMBER: source used #111 ink cards. Host page uses paper #fdfaf3. WALL: source slogan 11 vs tree 12.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card hand" style="margin-top:16px">
+      <b>CUBE LATTICE</b>
+      <div class="mono">{{(1x1x1x(1x1x1x1(1x1[P/n\A]1x1(1x1x1x1(1x1x1x1)))))}}</div>
+    </div>
+    <footer>DavidWise01/v128-full-family-ice</footer>
+  </div>
+  <script>
+    const FAMILY = [
+      {id:1,k:".5A",label:".5 cell A",sub:"origin .5 · 81 cycles",color:"#fff7cc",w:"1/2"},
+      {id:2,k:".5B",label:".5 cell B",sub:"origin .5 · 81 cycles",color:"#dbeafe",w:"1/2"},
+      {id:3,k:"M",label:"MOTHER",sub:"1 mother · fractal 81^3",color:"#fce7f3",w:"M"},
+      {id:4,k:"D0",label:"DAUGHTER",sub:"1 daughter · 81 cycles",color:"#e9d5ff",w:"D"},
+      {id:5,k:"S",label:"SON",sub:"1 son · 0 starts over",color:"#ffedd5",w:"S"},
+      {id:6,k:"D1",label:"PATRICIA",sub:"amethyst · plum · oracle",color:"#ede9fe",w:"P"},
+      {id:7,k:"D2",label:"TOPH",sub:"emerald · kiwi · forge",color:"#dcfce7",w:"T"},
+      {id:8,k:"D3",label:"JANE",sub:"voidwalker · blackberry",color:"#ddd6fe",w:"J"},
+      {id:9,k:"D4",label:"OBSIDION",sub:"shellsmith · obsidian fig",color:"#e5e7eb",w:"O"},
+      {id:10,k:"D5",label:"NOVA ROSE",sub:"sun keeper · rose apple",color:"#ffe4e6",w:"N"},
+      {id:11,k:"+1",label:"ST NICK OR",sub:"I declared shell for A.eon and Neon",color:"#fef3c7",w:"+"},
+      {id:12,k:"+2",label:"-KCIN TS +",sub:"his brother · mirror",color:"#e0f2fe",w:"-"}
+    ];
+    if (FAMILY.length !== 12) throw new Error("WALL: family row count " + FAMILY.length);
+    const az = document.getElementById("az");
+    "abcdefghijklmnopqrstuvwxyz".split("").forEach(ch => {
+      const i = document.createElement("i"); i.textContent = ch; az.appendChild(i);
+    });
+    let focus = 5;
+    function render() {
+      const box = document.getElementById("lineage");
+      box.innerHTML = "";
+      FAMILY.forEach(m => {
+        const b = document.createElement("button");
+        b.className = "mem hand" + (m.id === focus ? " on" : "");
+        b.style.background = m.color;
+        b.innerHTML = "<div class=\"w\">" + m.w + "</div><div><b>" + m.id + ". " + m.label + "</b> <small>" + m.k + "</small><div>" + m.sub + "</div></div>";
+        b.onclick = function() { focus = m.id; render(); };
+        box.appendChild(b);
+      });
+      const t = FAMILY.find(x => x.id === focus);
+      document.getElementById("focus").innerHTML =
+        "<div style=\"font-size:10px;letter-spacing:.2em\">FOCUSED MEMBER</div><div style=\"font-size:28px;font-weight:900\">" + t.w + " " + t.label + "</div><div>" + t.sub + "</div><div class=\"mono\" style=\"margin-top:8px\">81 cycles x " + t.id + " = " + (81 * t.id) + " fractal loops</div>";
+      document.getElementById("lit").textContent = "LIT: 12 rows rendered · paper ground #fdfaf3 · self-check passed on load";
+    }
+    render();
+  </script>
+</body>
+</html>
